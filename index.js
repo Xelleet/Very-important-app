@@ -1,6 +1,5 @@
 function changeBackground(){
-    var red = Math.floor(Math.random() * 256);
-    var green = Math.floor(Math.random() * 256);
-    var blue = Math.floor(Math.random() * 256);
-    document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+    var color = `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;
+    document.body.style.backgroundColor = color;
+    document.getElementById('current-color').textContent = color;
 }
